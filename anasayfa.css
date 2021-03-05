@@ -1,0 +1,29 @@
+body {
+    background-color: #000000;
+}
+
+.navbar {
+  background-color: #860e0e;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-family: "Sofia",sans-serif;
+  font-size: 27;
+}
+
+li {
+  font-family: "Corbel";
+  font-size: 27px;
+}
+
+p {
+  color: #ffffff;
+  font-size: 20px;
+  height: 12px;
+}
+
+.ustyazi {
+  background-color: #d47c7c;
+  height: 25px;
+}
