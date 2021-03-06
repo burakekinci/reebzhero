@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
 body {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .navbar {
-  background-color: #860e0e;
+  background-color: #000000;
 }
 
 .navbar-brand {
@@ -12,18 +14,105 @@ body {
   font-size: 27;
 }
 
+.container-xl{
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+/*navbar içerikleri*/
 li {
-  font-family: "Corbel";
-  font-size: 27px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-p {
-  color: #ffffff;
-  font-size: 20px;
-  height: 12px;
-}
-
+/*... üzeri kargo bedava*/
 .ustyazi {
-  background-color: #d47c7c;
-  height: 25px;
+  background: rgba(255, 255, 255, 0.16);
+  height: 30px;
+  width: initial;
+  margin: auto;
 }
+
+.text-center{
+  color: #707070;
+  font-family: 'Segoe UI';
+  font-size: 20px;
+}
+
+/*büyük resim*/
+.container-lg-fluid {
+  background-color: blue;
+  border: cornsilk;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/*hamburger menü*/
+.navbar-toggler {
+  display: inline-block;
+  border: none;
+  width: 22px;
+  height: 20px;
+  background-color: #000000;
+  
+}
+
+.toggle-container {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: -10px;
+  margin-top: -5px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 3px);
+  transform: rotate(-45deg) translate(-9px, 3px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -3px);
+  transform: rotate(45deg) translate(-8px, -3px);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*arama yap*/
+.arama{
+  margin-left: auto;
+  margin-top:auto;
+  margin-bottom: auto;
+}
+
+.form-control,.form-control:focus{
+  transform: translate(0px,15px);
+  border-radius: 30px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+.buton{
+  border: none;
+  background-color: transparent;
+  color: white;
+  transform: translate(5px,-15px);
+}
+
