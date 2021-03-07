@@ -14,18 +14,22 @@ body {
   font-size: 27;
 }
 
-.container-xl{
-  margin-left: auto;
-  margin-right: auto;
- 
+.container-xl-fluid{
+  margin-left: 7%;
+  margin-right: 7%;
+  min-width: 85%;
+  max-height: 80px;
+  
 }
 
 /*navbar içerikleri*/
 li {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 25px;
-  margin-right: 10px;
-  margin-left: 10px;
+  font-size: 22px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: -25px;;
+  
 }
 
 /*... üzeri kargo bedava*/
@@ -52,16 +56,14 @@ li {
 
 /*hamburger menü*/
 .navbar-toggler {
-  display: inline-block;
   border: none;
   width: 22px;
   height: 20px;
   background-color: #000000;
-  
+  transform: translate(0px,15px);
 }
 
 .toggle-container {
-  display: inline-block;
   cursor: pointer;
   margin-left: -10px;
   margin-top: -5px;
@@ -94,12 +96,19 @@ li {
   box-shadow: none;
 }
 
+
+
+
 /*arama yap*/
 .arama{
-  margin-left: auto;
-  margin-top:auto;
+  margin-top: auto;
   margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 2%;
+  transform: translate(0px,-22px);
 }
+
+
 
 .form-control,.form-control:focus{
   transform: translate(0px,15px);
@@ -107,7 +116,9 @@ li {
   border: 0px;
   background-color: rgba(255, 255, 255, 0.35);
   text-align: center;
+  -webkit-text-fill-color: #ffffff;
 }
+
 
 .buton{
   border: none;
@@ -116,3 +127,43 @@ li {
   transform: translate(5px,-15px);
 }
 
+/*Logo*/
+.navbar-brand > img{
+ display: block;
+ max-height: 80px;
+ height: auto;
+ transition: all 0.4s;
+}
+
+
+/*mobil ekran*/
+@media screen and (max-width: 768px){
+  .navbar-brand>img{
+    max-height: 50px;
+    height: auto;
+  }
+
+  .container-xl-fluid{
+    margin-left: 2%;
+    margin-right: 2%;
+    min-width: 90%;
+  }
+
+  li {
+    margin-top: 30px;
+  }
+
+  .navbar-collapse{
+    margin-left: 25%;
+    margin-top: auto;
+  }
+  .arama{
+    margin-top: 30px;
+  }
+ 
+
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: none;
+}
