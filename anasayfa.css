@@ -48,11 +48,52 @@ li {
 
 /*büyük resim*/
 .container-lg-fluid {
-  background-color: blue;
-  border: cornsilk;
-  padding-left: 10%;
-  padding-right: 10%;
+  background-position: center;
+  background-image:url("/anasayfa.png");
+  z-index: -999;
+  background-repeat: no-repeat, repeat;
+  text-align: center;
+  transform: translate(1px,0px);
+  margin-left:auto ;
+  margin-right: auto;
+  background-size:100%;
+  width: 95%;
+  height: 800px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
+
+/*büyük resim button*/
+.btn.btn-outline-dark{
+  color: white;
+  border-color: rgb(235, 224, 224);
+  border-radius: 0%;
+  height: 60px;
+  font-size: 22px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  transition: 0.7s ease;
+  transform: translate(0%,220%);
+}
+.btn.btn-outline-dark:hover{
+  color: black;
+  background: linear-gradient( 45deg,  rgba(29, 236, 197, 0.5),  rgba(203, 194, 216, 0.5) 100%)
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.responsive{
+  width: 100%;
+  height: auto;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 
 /*hamburger menü*/
 .navbar-toggler {
@@ -61,6 +102,8 @@ li {
   height: 20px;
   background-color: #000000;
   transform: translate(0px,15px);
+  position: relative;
+  z-index: 1001;
 }
 
 .toggle-container {
@@ -117,6 +160,9 @@ li {
   background-color: rgba(255, 255, 255, 0.35);
   text-align: center;
   -webkit-text-fill-color: #ffffff;
+  outline: none;
+  box-shadow: none;
+  
 }
 
 
@@ -133,6 +179,16 @@ li {
  max-height: 80px;
  height: auto;
  transition: all 0.4s;
+}
+
+/*Limited edition collection text*/
+.edition{
+  font-size: 65px;
+  color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -156,14 +212,28 @@ li {
   .navbar-collapse{
     margin-left: 25%;
     margin-top: auto;
+    z-index: 1000;
+    position: relative;
   }
   .arama{
     margin-top: 30px;
+    margin-left: 5px;
   }
- 
+  
+  .container-lg-fluid{
+    -webkit-background-size:200%;
+    -moz-background-size:200%;
+    -o-background-size:200%;
+    background-size:200%;
+    background-position:top;
+    height: 500px;
+  }
+
+  .edition{
+    font-size:30px ;
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
 
 }
 
-.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-  max-height: none;
-}
