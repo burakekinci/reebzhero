@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
-body {
+html,body {
+  height: 100%;
   background-color: #000000;
 }
-
+a, u {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  color: inherit;
+}
 .navbar {
   background-color: #000000;
 }
@@ -29,9 +36,16 @@ li {
   margin-right: 8px;
   margin-left: 8px;
   margin-top: -25px;;
-  
+  margin-bottom: 0px;
 }
 
+.nav-item .alısveris, .hakkımızda, .sss{
+  display: none;
+}
+.nav-item .iletisim{
+  margin-left: -20px;
+  text-transform: capitalize;
+}
 /*... üzeri kargo bedava*/
 .ustyazi {
   background: rgba(255, 255, 255, 0.16);
@@ -44,6 +58,11 @@ li {
   color: #707070;
   font-family: 'Segoe UI';
   font-size: 20px;
+}
+
+/*contents*/
+.contents{
+  min-height: 100%;
 }
 
 /*büyük resim*/
@@ -192,6 +211,47 @@ li {
 }
 
 
+/*footer*/
+footer{
+  position: relative;
+}
+.footer{
+  background:rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.68);
+  height: 350px;
+  position: relative;
+}
+
+.footer .footer-content{
+  height: 300px;
+  display: flex;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.footer .footer-content .footer-section{
+  flex: 1;
+}
+.footer-section.general{
+  padding-top: 110px;
+  padding-left:80px ;
+}
+.footer-section.papers{
+  padding-top: 110px;
+  padding-left:0px ;
+}
+.footer-section.socials{
+  padding-top: 110px;
+  padding-left:200px ;
+}
+.fa.fa-facebook,.fa.fa-instagram, .fa.fa-twitter {
+  font-size: 55px;
+  transition: 0.7s ease;
+  padding: 5px;
+}
+.fa.fa-facebook:hover,.fa.fa-instagram:hover, .fa.fa-twitter:hover {
+  color: rgb(42, 111, 168);
+ 
+}
 /*mobil ekran*/
 @media screen and (max-width: 768px){
   .navbar-brand>img{
@@ -206,7 +266,16 @@ li {
   }
 
   li {
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-left: 20px;
+    text-transform: uppercase;
+  }
+
+  .nav-item{
+    padding-top: 0px;
+  }
+  .nav-item .alısveris, .hakkımızda, .sss{
+    display: block;
   }
 
   .navbar-collapse{
@@ -215,10 +284,23 @@ li {
     z-index: 1000;
     position: relative;
   }
-  .arama{
-    margin-top: 30px;
-    margin-left: 5px;
+
+  .anasayfa{
+    border-bottom: 1px solid rgba(203, 194, 216, 0.3);
+    padding-bottom: 5px;
   }
+
+  .nav-item .alısveris{
+    border-bottom: 1px solid rgba(203, 194, 216, 0.3);
+    padding-bottom: 5px;
+  }
+  .nav-item .iletisim{
+    margin-left: 0px;
+    text-transform: uppercase;
+  }
+  .arama{
+    display: none;
+   }
   
   .container-lg-fluid{
     -webkit-background-size:200%;
@@ -235,5 +317,30 @@ li {
     margin-bottom: -30px;
   }
 
+  /*footer-mobile*/
+
+  .footer{
+    height: 300px;
+  }
+
+  .footer.footer-content{
+    height: 250px;
+  }
+
+  .footer-section.empty{
+    display: none;
+  }
+
+  .footer-section.general{
+   display: none;
+  }
+  .footer-section.papers{
+    padding-top: 20%;
+    padding-left:6% ;
+  }
+  .footer-section.socials{
+    padding-top: 20%;
+    padding-left:0px ;
+  }
 }
 
