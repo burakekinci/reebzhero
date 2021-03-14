@@ -69,7 +69,7 @@ li {
 /*büyük resim*/
 .container-lg-fluid {
   background-position: center;
-  background-image:url("/anasayfa.png");
+  background-image:url("../img/anasayfa.png");
   z-index: -999;
   background-repeat: no-repeat, repeat;
   text-align: center;

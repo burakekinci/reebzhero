@@ -1,0 +1,89 @@
+{% load static  %}
+
+<!--header start-->
+ <header>
+    <div class="ustyazi">
+        <p class="text-center font-weight-normal">200 TL üstü alışverişe ücretsiz kargo fırsatı!</p>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-xl-fluid">
+            <!--logo kısmı-->
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <img id="logo" src="{% static 'img/logo.png' %}" alt="Brand"  class="pull-left">
+            </a>
+            <!--hamburger menü açma kapama düğmesi-->
+            <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse" onclick="toggler(this)">
+                <div class="toggle-container">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </button>
+            <!--navbar-->
+            <div id="navbarCollapse" class="collapse navbar-collapse" style="background:black">
+               
+                <ul class="navbar-nav">
+                    <li class="nav-item" >
+                        <a href="{% url 'index' %}"
+                            {% if request.path == '/' %}
+                                class="nav-link active"
+                            {% else %}
+                                class="nav-link"
+                            {% endif %}
+                        >
+                            <p class="anasayfa">Ana Sayfa</p> 
+                        </a>
+                    </li>
+
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <p class="urunler">Ürünler</p> 
+                        </a>
+                    </li>
+
+                    <li class="nav-item alısveris">
+                        <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g" class="nav-link">
+                            <p class="alısveris">ALIŞVERİŞ YAP</p> 
+                        </a>
+                    </li>
+
+                    <li class="nav-item hakkımızda">
+                        <a href="{% url 'about' %}"
+                            {% if 'about' in  request.path %}
+                                class="nav-link active"
+                            {% else %}
+                                class="nav-link"
+                            {% endif %}
+                        >
+                            <p class="hakkımızda">HAKKIMIZDA</p> 
+                        </a>
+                    </li>
+
+                    <li class="nav-item iletisim">
+                        <a href="#" class="nav-link">
+                            <p class="iletisim">İletişim</p> 
+                        </a>
+                    </li>
+
+                    <li class="nav-item sss">
+                        <a href="#" class="nav-link">
+                            <p class="sss">SSS</p> 
+                        </a>
+                    </li>
+                    
+
+                    
+                </ul>
+
+                <div class="arama">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Arama yap" aria-label="Search">
+                        <button class="buton" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+                     
+        </div>
+    </nav>
+</header>
+<!--header end-->
