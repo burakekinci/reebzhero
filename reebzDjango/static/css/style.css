@@ -61,12 +61,13 @@ li {
 
 /*contents*/
 .contents{
-  padding: 5em;
+  
   padding-top: 0em;
   min-height: 100%;
 }
 
 /*büyük resim*/
+/*anasayfa*/
 .container-lg-fluid {
   background-position: center;
   background-image:url("../img/anasayfa.png");
@@ -82,6 +83,43 @@ li {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+/*hakkımızda*/
+.container-lg-fluid.about{
+  background-position: center;
+  background-image:url("../img/hakkında.png");
+  opacity: 0.27;
+  z-index: -999;
+  color: #ffffff;
+  background-repeat: no-repeat, repeat;
+  text-align: center;
+  transform: translate(1px,0px);
+  margin-left:auto ;
+  margin-right: auto;
+  background-size:100%;
+  width: 95%;
+  height: 950px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-text{
+  color: #ffffff;
+  transform: translate(0px,-750px);
+  padding-left: 250px;
+  height: 150px;
+}
+
+.about-text .h2{
+  font-size: 40px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.about-text .h1{
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 /*büyük resim button*/
@@ -257,7 +295,7 @@ footer{
 
 /*Products*/
 .product-list{
-  transform: translate(0px,-50px);
+  
   padding-left:8em;
   padding-right: 6em;
   padding-top: 0em;
@@ -373,6 +411,15 @@ footer{
     height: 500px;
   }
 
+  .container-lg-fluid.about{
+    -webkit-background-size:150%;
+    -moz-background-size:150%;
+    -o-background-size:150%;
+    background-size:150%;
+    background-position:top;
+    height: 380px;
+  }
+
   .edition{
     font-size:30px ;
     margin-top: -30px;
@@ -405,7 +452,47 @@ footer{
     padding-left:0px ;
   }
 
+  /*product list*/
+  .product-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 90px;
+  }
+
+  .product-list{
+    padding-left:2em;
+    padding-right: 2em;
+    padding-top: 0em;
+  }
+
+  .product-list .card{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  /*hakkında*/
+  .about-text{
+    height: 50px;
+    background-color:transparent ;
+    color: #ffffff;
+    transform: translate(0px,-350px);
+    padding-left: 10px;
+  }
   
+  .about-text .h2{
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .about-text .h1{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Nunito Sans', sans-serif;
+  }
 
 }
 
