@@ -11,3 +11,12 @@ def about(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
+
+def contract(request):
+    return render(request, 'pages/contract.html')
+
+def sss(request):
+    return render(request, 'pages/sss.html')
+
+def privacy(request):
+    return render(request, 'pages/privacy.html')    

@@ -72,7 +72,13 @@
                     </li>
 
                     <li class="nav-item sss">
-                        <a href="#" class="nav-link">
+                        <a href="{% url 'sss' %}"
+                            {% if 'sss' in  request.path %}
+                                class="nav-link active"
+                            {% else %}
+                                class="nav-link"
+                            {% endif %}
+                        >
                             <p class="sss">SSS</p> 
                         </a>
                     </li>

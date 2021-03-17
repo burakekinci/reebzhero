@@ -1,9 +1,22 @@
 {% extends 'layout.html' %}
+{% load static  %}
 
 {% block content %}
 
-<section>
-    <h1>iletişim sayfası</h1>
+<section class="contact-container">
+    <div class="always">
+        <img src="{% static 'img/iletisimYazi.png'%}">
+    </div>
+    <div class="contacts">
+        <p class="h2">E-POSTA ADRESİ:</p>
+        <p class="h1">reebzhero@gmail.com</p>
+        <br><br>
+        <p class="h2">INSTAGRAM:</p>
+        <p class="h2">@reebzhero</p>
+        <br><br>
+        <p class="h2">TWITTER:</p>
+        <p class="h2">@reebzhero</p>
+    </div>
 </section>
 
 {% endblock %}

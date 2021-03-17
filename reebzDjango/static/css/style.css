@@ -4,6 +4,13 @@ html,body {
   height: 100%;
   background-color: #000000;
 }
+
+pre{
+  color: #ffffff;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
 a, u {
   text-decoration: none;
   color: inherit;
@@ -64,6 +71,44 @@ li {
   
   padding-top: 0em;
   min-height: 100%;
+}
+
+/*satış sözleşmesi-gizlilik sözleşmesi*/
+.contractPage, .privacyPage, .sssPage{
+  padding-left: 10%;
+  padding-top: 2%;
+  padding-right:7%;
+  color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+/*iletişim*/
+.contact-container{
+ padding: 5%;
+ height: 850px;
+ margin: auto;
+ color: white;
+ font-family: 'Nunito Sans', sans-serif;
+ font-size: 35px;
+ font-weight: 400;
+}
+
+.always{
+  padding: 8%;
+  height: 450px;
+  float: left;
+}
+
+.always img{
+  max-width: 90%;
+}
+
+.contacts{
+  margin-bottom: 20%;
+  
 }
 
 /*büyük resim*/
@@ -480,7 +525,7 @@ footer{
     background-color:transparent ;
     color: #ffffff;
     transform: translate(0px,-350px);
-    padding-left: 10px;
+    padding: 5%;
   }
   
   .about-text .h2{
@@ -492,6 +537,38 @@ footer{
     font-size: 16px;
     font-weight: 400;
     font-family: 'Nunito Sans', sans-serif;
+  }
+
+  /*iletişim*/
+  .contact-container{
+    display: block;
+    padding: 10px;
+    height: 850px;
+    margin: auto;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+   }
+
+  .always{
+    float:none;
+    height: 350px;
+  }
+
+  .always img{
+    max-width: 100%;
+  }
+
+  .contacts{
+    padding-top: 1%;
+    padding-left: 20%;
+  }  
+ 
+  .contractPage, .privacyPage, .sssPage{
+    padding-left: 7%;
+    padding-right: 5%;
+    font-size: 20px;
   }
 
 }

@@ -4,4 +4,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
+    path('contract', views.contract, name='contract'),
+    path('sss', views.sss, name='sss'),
+    path('privacy', views.privacy, name='privacy'),
 ]
