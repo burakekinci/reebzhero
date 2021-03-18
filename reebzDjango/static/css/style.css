@@ -21,6 +21,12 @@ a, u {
 a:hover{
   color: inherit;
 }
+
+.empty-div{
+  height: 30%;
+  background-color:#000000;
+}
+
 .navbar {
   background-color: #000000;
 }
@@ -118,6 +124,12 @@ li {
 
 /*büyük resim*/
 /*anasayfa*/
+
+.buyuk-resim-container{
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 .container-lg-fluid {
   background-position: center;
   background-image:url("../img/anasayfa.png");
@@ -368,14 +380,14 @@ footer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 20px;
-  grid-row-gap: 90px;
+  grid-row-gap: 150px;
 }
 
 .product-list .card{
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  width: 530px;
+  width: 80%;
   height: 650px;
 }
 
@@ -417,6 +429,10 @@ footer{
 
 /*mobil ekran*/
 @media only screen and (max-width: 600px){
+
+  .empty-div{
+    height: 20%;
+  }
     
   .ustyazi>.text-center{
     font-size: 16px;
@@ -553,7 +569,7 @@ footer{
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
-    grid-row-gap: 30px;
+    grid-row-gap: 80px;
     height: 100%;
   }
 

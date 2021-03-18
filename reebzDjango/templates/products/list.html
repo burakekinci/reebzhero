@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% load static  %}
+
+{% block content %}
+{{ name }}
+<h1>Products Page</h1>
+
+
+<section class="product-list">
+    <div class="product-container">
+        
+        {% if products %}
+            {% for product in products %}
+                <!--1productStart-->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static product.get_image_path %}">
+                    </div>
+                    <div class="card-title">{{ product.name }}</div>
+                    <div class="card-text">{{ product.desc }}</div>
+                    <div>
+                        <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
+                            <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
+                        </a>
+                    </div>
+                </div>
+                <!--1productEnd-->
+            {% endfor %}
+
+
+        {% else %}
+            <div class="alert alert-warning">
+                <p>
+                    No Products
+                </p>
+            </div>
+
+        {% endif %}
+        
+       
+    </div>
+</section>
+<br><br><br><br>
+
+
+{% endblock %}
