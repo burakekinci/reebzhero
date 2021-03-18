@@ -2,7 +2,10 @@
 
 html,body {
   height: 100%;
+  width: 100%;
   background-color: #000000;
+  margin: 0;
+  padding: 0;
 }
 
 pre{
@@ -30,9 +33,11 @@ a:hover{
 .container-xl-fluid{
   margin-left: 7%;
   margin-right: 7%;
-  min-width: 85%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
   max-height: 80px;
-  
+  align-items: center;
 }
 
 /*navbar içerikleri*/
@@ -56,7 +61,7 @@ li {
 .ustyazi {
   background: rgba(255, 255, 255, 0.16);
   height: 30px;
-  width: initial;
+  width: 100%;
   margin: auto;
 }
 
@@ -177,7 +182,7 @@ li {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   transition: 0.7s ease;
-  transform: translate(0%,220%);
+  transform: translate(0,200%);
 }
 .btn.btn-outline-dark:hover{
   color: black;
@@ -204,7 +209,7 @@ li {
   width: 22px;
   height: 20px;
   background-color: #000000;
-  transform: translate(0px,15px);
+  transform: translate(-15px,15px);
   position: relative;
   z-index: 1001;
 }
@@ -337,6 +342,19 @@ footer{
  
 }
 
+.display-4.sozlesme{
+  font-size: 2vw;
+}
+
+.footer-hakkımızda, .footer-iletisim, .footer-sss, .footer-satıs, .footer-gizlilik{
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+.h6.reebz{
+  font-size: 22px;
+  letter-spacing: 5px;
+}
 
 /*Products*/
 .product-list{
@@ -398,7 +416,12 @@ footer{
 }
 
 /*mobil ekran*/
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 600px){
+    
+  .ustyazi>.text-center{
+    font-size: 16px;
+  }
+  
   .navbar-brand>img{
     max-height: 50px;
     height: auto;
@@ -407,7 +430,7 @@ footer{
   .container-xl-fluid{
     margin-left: 2%;
     margin-right: 2%;
-    min-width: 90%;
+    width: 120%;
   }
 
   li {
@@ -448,12 +471,18 @@ footer{
    }
   
   .container-lg-fluid{
+    padding-top:0 !important;
+    padding-bottom: 0 !important;
     -webkit-background-size:200%;
     -moz-background-size:200%;
     -o-background-size:200%;
     background-size:200%;
-    background-position:top;
-    height: 500px;
+    background-position:center;
+    max-height: 400px;
+  }
+
+  .btn.btn-outline-dark{
+    transform: translate(0,110%);
   }
 
   .container-lg-fluid.about{
@@ -473,8 +502,30 @@ footer{
 
   /*footer-mobile*/
 
+  .fa.fa-facebook,.fa.fa-instagram, .fa.fa-twitter {
+    font-size: 30px;
+  }
+
+  .display-4.sozlesme{
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .footer-satıs, .footer-gizlilik{
+    font-size: 16px;
+    font-weight: lighter;
+    padding-top:0;
+    padding-bottom:0;
+  }
+
+  .h6.reebz{
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+
   .footer{
     height: 300px;
+    min-width: 100%;
   }
 
   .footer.footer-content{
@@ -502,7 +553,8 @@ footer{
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
-    grid-row-gap: 90px;
+    grid-row-gap: 30px;
+    height: 100%;
   }
 
   .product-list{
@@ -512,11 +564,21 @@ footer{
   }
 
   .product-list .card{
+    padding-right: auto;
+    padding-left: auto;
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    max-width: 80%;
-    max-height: 80%;
+    width: 100%;
+    height:fit-content
+  }
+
+  .card-image{
+    height: 40%;
+  }
+
+  .card-image img{
+    height: 100%;
   }
 
   /*hakkında*/

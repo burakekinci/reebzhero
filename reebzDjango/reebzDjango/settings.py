@@ -25,7 +25,7 @@ SECRET_KEY = 'phgx$e@p93c9(*t*n^5mg2m&i)rc85j@j!i2g4b&08iw#_=b58'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
