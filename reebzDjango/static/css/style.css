@@ -372,12 +372,13 @@ footer{
 .product-list{
   
   padding-left:8em;
-  padding-right: 6em;
+  padding-right: 8em;
   padding-top: 0em;
 }
 
 .product-container{
   display: grid;
+  padding: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 150px;
@@ -387,7 +388,9 @@ footer{
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  width: 90%;
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
   height: 650px;
 }
 
@@ -425,6 +428,129 @@ footer{
 .btn.card-btn:hover{
   color: black;
   background: linear-gradient( 45deg,  rgba(29, 236, 197, 0.5),  rgba(203, 194, 216, 0.5) 100%)
+}
+
+
+/*DetailPage*/
+.detailCard{
+  padding-left: 8.1em;
+  padding-right: 8em;
+  padding-bottom: 1em;
+  padding-top: 5px;
+  display: flex;
+}
+
+.detailCard .CardImgs{
+  height: 100%;
+  flex: 0 0 40%;
+  
+}
+
+.detailCard .CardTexts{
+  height: 100%;
+  flex: 1;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.detailTitle{
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.detailText{
+  padding-top: 5%;
+  font-size: 23px;
+  color: #ffffff;
+  font-weight: lighter;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.priceAndBtn{
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+.price{
+  flex: 0 0 20%;
+  text-align: center;
+  font-size: 38px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.buy{
+  flex:1;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.bodyText{
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.bodyTableContainer{
+  padding-top: 10%;
+}
+
+.bodyTableImg{
+  padding-right: 5%;
+}
+.bodyTableImg img{
+  width: 60%;
+  height: 60%;
+}
+
+.smallImgs{
+  padding-top: 2%;
+}
+.small-img-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col{
+  flex-basis: 24%;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  height: 150px;
+  
+}
+
+.small-img-col img{
+  border: 2px solid #707070;
+  height: 100%;
+  background-size: cover;
+}
+.bigImg{
+  height: 600px;
+}
+.bigImg img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.extraProducts .detailText{
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+.showAllProducts{
+  padding-top: 5%;
+  padding-left: 40%;
+  padding-right: 40%;
+  text-align: center;
 }
 
 /*mobil ekran*/

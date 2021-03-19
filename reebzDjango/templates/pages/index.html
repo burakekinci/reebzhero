@@ -27,13 +27,15 @@
                     <!--1productStart-->
                     <div class="card">
                         <div class="card-image">
-                            <img src="{% static mainPageProduct.get_image_path %}">
+                            <a href="{{mainPageProduct.reebzLink}}"><img src="{% static mainPageProduct.get_image_path %}"></a>
                         </div>
-                        <div class="card-title">{{ mainPageProduct.name }}</div>
+                        <div class="card-title">
+                            <a href="{{mainPageProduct.reebzLink}}">{{ mainPageProduct.name }}</a>
+                        </div>
                         <div class="card-text">{{ mainPageProduct.desc }}</div>
                         <div>
-                            <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                                <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
+                            <a href="{{ mainPageProduct.link }}">
+                                <button type="button" class="btn card-btn">SATIN AL</button>
                             </a>
                         </div>
                     </div>

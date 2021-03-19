@@ -13,15 +13,15 @@
                 <!--1productStart-->
                 <div class="card">
                     <div class="card-image">
-                        <img src="{% static product.get_image_path %}">
+                        <a href="{% url 'detail' product.id %}"><img src="{% static product.get_image_path %}"></a>
                     </div>
                     <div class="card-title">
                         <a href="{% url 'detail' product.id %}">{{ product.name }}</a>
                     </div>
                     <div class="card-text">{{ product.desc }}</div>
                     <div>
-                        <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                            <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
+                        <a href="{{ product.link }}">
+                            <button type="button" class="btn card-btn">SATIN AL</button>
                         </a>
                     </div>
                 </div>

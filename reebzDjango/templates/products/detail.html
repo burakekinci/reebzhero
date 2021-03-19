@@ -2,7 +2,134 @@
 {% load static  %}
 
 {% block content %}
+  <div class="detailCard">
+    <div class="CardImgs">
+        <div class="bigImg">
+            <img src="{% static product.get_image_path %}" width="100%" id="bigImg" alt="" name="bigImg">
+        </div>
+        <div class="smallImgs">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="{% static product.get_image1 %}" width="100%" class="small-img" onclick="myFunc(this);">
+                </div>
+                <div class="small-img-col">
+                    <img src="{% static product.get_image2 %}" width="100%" class="small-img" onclick="myFunc(this);">
+                </div>
+                <div class="small-img-col">
+                    <img src="{% static product.get_image3 %}" width="100%" class="small-img" onclick="myFunc(this);">
+                </div>
+                <div class="small-img-col">
+                    <img src="{% static product.get_image4 %}" width="100%" class="small-img" onclick="myFunc(this);">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="CardTexts">
+        <h2 class="detailTitle">{{ product.name }}</h2>
+        <p class="detailText">Kumaşı %100 pamuk, içi yumuşak dokulu (şardonlu), birinci sınıf kaliteli penyedir. Kumaş üretiminde kullanılan boyalar, sertifikalı ve güvenlidir; insan sağlığına zarar vermez.</p>
+        <div class="priceAndBtn">
+            <div class="price">
+                {{ product.desc }}
+            </div>
+            <div class="buy">
+                <div class="buyBtn">
+                    <a href="{{ product.link }}">
+                        <button type="button" class="btn card-btn">SATIN AL</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+       <div class="bodyTableContainer">
+            <div class="bodyTable">
+                <p class="bodyText">Bedeninizi öğrenmek için:</p>
+                <div class="bodyTableImg">
+                    <img src="{% static 'img/bodyTable.png'  %}">
+                </div>
+            </div>
+       </div>
+    </div>
+  </div>
+ <br><br><br><br>
 
-<h1>Detail page</h1>
+  
+    
+  
+    <section class="product-list">
+        <p class="detailText">Benzer Ürünler</p>
+        <div class="product-container">
+            
+        
+            <!--1productStart-->
+            <div class="card">
+                <div class="card-image">
+                    <a href="{% url 'detail' 1%}"><img src="{% static 'img/overdose1.jpg' %}"></a>
+                </div>
+                <div class="card-title">
+                    <a href="{% url 'detail' 1 %}">OVERDOSE</a>
+                </div>
+                <div class="card-text">140 TL</div>
+                <div>
+                    <a href="https://www.shopier.com/ShowProductNew/products.php?id=4377780&sid=TnVJeGhnUmp0cGRmblVHVTBfMV8gXyA=">
+                        <button type="button" class="btn card-btn">SATIN AL</button>
+                    </a>
+                </div>
+            </div>
+            <!--1productEnd-->
+
+            <!--1productStart-->
+            <div class="card">
+                <div class="card-image">
+                    <a href="{% url 'detail' 2%}"><img src="{% static 'img/whatever2.png' %}"></a>
+                </div>
+                <div class="card-title">
+                    <a href="{% url 'detail' 2 %}">WHATEVER</a>
+                </div>
+                <div class="card-text">140 TL</div>
+                <div>
+                    <a href="https://www.shopier.com/ShowProductNew/products.php?id=4377860&sid=QkczMk5ld0hKQ0lFWUpRSjBfMF8gXyA=">
+                        <button type="button" class="btn card-btn">SATIN AL</button>
+                    </a>
+                </div>
+            </div>
+            <!--1productEnd-->
+
+             <!--1productStart-->
+             <div class="card">
+                <div class="card-image">
+                    <a href="{% url 'detail' 2%}"><img src="{% static 'img/whatever2.png' %}"></a>
+                </div>
+                <div class="card-title">
+                    <a href="{% url 'detail' 2 %}">WHATEVER</a>
+                </div>
+                <div class="card-text">140 TL</div>
+                <div>
+                    <a href="https://www.shopier.com/ShowProductNew/products.php?id=4377860&sid=QkczMk5ld0hKQ0lFWUpRSjBfMF8gXyA=">
+                        <button type="button" class="btn card-btn">SATIN AL</button>
+                    </a>
+                </div>
+            </div>
+            <!--1productEnd-->
+        
+        
+        </div>
+        <br><br>
+        <div class="showAllProducts">
+            <a href="{% url 'products' %}">
+                <button type="button" class="btn card-btn">Tüm Ürünleri Göster</button>
+            </a>
+        </div>
+    </section>
+
+    <!--js for product gallery-->
+    <script>
+        function myFunc(imgs){
+            var bigImg = document.getElementById("bigImg");
+            console.log("{% static product.get_link %}");
+            bigImg.src = imgs.src;
+        }
+
+    </script>
+
 
 {% endblock %}

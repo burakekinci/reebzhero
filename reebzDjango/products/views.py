@@ -2,13 +2,16 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import Http404
 from . models import Product
+from . models import extraProduct
 # Create your views here.
 
 
 def index(request):
     products = Product.objects.all()
+    extraProducts = extraProduct.objects.all()
     context = {
-        'products': products
+        'products': products,
+        'extraProducts': extraProducts
     }
     return render(request, 'products/list.html',context)
 
