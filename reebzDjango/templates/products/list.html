@@ -2,8 +2,7 @@
 {% load static  %}
 
 {% block content %}
-{{ name }}
-<h1>Products Page</h1>
+
 
 
 <section class="product-list">
@@ -16,7 +15,9 @@
                     <div class="card-image">
                         <img src="{% static product.get_image_path %}">
                     </div>
-                    <div class="card-title">{{ product.name }}</div>
+                    <div class="card-title">
+                        <a href="{% url 'detail' product.id %}">{{ product.name }}</a>
+                    </div>
                     <div class="card-text">{{ product.desc }}</div>
                     <div>
                         <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">

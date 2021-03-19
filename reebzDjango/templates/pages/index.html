@@ -21,77 +21,36 @@
     <!--Ürün Listesi-->
     <section class="product-list">
         <div class="product-container">
-            <!--1productStart-->
-            <div class="card">
-                <div class="card-image">
-                    <img src="{% static 'img/2.jpg' %}">
+            
+            {% if mainPageProducts %}
+                {% for mainPageProduct in mainPageProducts %}
+                    <!--1productStart-->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{% static mainPageProduct.get_image_path %}">
+                        </div>
+                        <div class="card-title">{{ mainPageProduct.name }}</div>
+                        <div class="card-text">{{ mainPageProduct.desc }}</div>
+                        <div>
+                            <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
+                                <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--1productEnd-->
+                {% endfor %}
+    
+    
+            {% else %}
+                <div class="alert alert-warning">
+                    <p>
+                        No Products
+                    </p>
                 </div>
-                <div class="card-title">OVERDOSE</div>
-                <div class="card-text">140 TL</div>
-                <div>
-                    <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                        <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
-                    </a>
-                </div>
-            </div>
-            <!--1productEnd-->
-            <!--1productStart-->
-            <div class="card">
-                <div class="card-image">
-                    <img src="{% static 'img/2.jpg' %}">
-                </div>
-                <div class="card-title">Overdose</div>
-                <div class="card-text">testtesttest</div>
-                <div>
-                    <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                        <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
-                    </a>
-                </div>
-            </div>
-            <!--1productEnd-->
-            <!--1productStart-->
-            <div class="card">
-                <div class="card-image">
-                    <img src="{% static 'img/2.jpg' %}">
-                </div>
-                <div class="card-title">Overdose</div>
-                <div class="card-text">açıklama</div>
-                <div>
-                    <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                        <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
-                    </a>
-                </div>
-            </div>
-            <!--1productEnd-->
-             <!--1productStart-->
-             <div class="card">
-                <div class="card-image">
-                    <img src="{% static 'img/2.jpg' %}">
-                </div>
-                <div class="card-title">Overdose</div>
-                <div class="card-text">açıklama</div>
-                <div>
-                    <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                        <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
-                    </a>
-                </div>
-            </div>
-            <!--1productEnd-->
-             <!--1productStart-->
-             <div class="card">
-                <div class="card-image">
-                    <img src="{% static 'img/2.jpg' %}">
-                </div>
-                <div class="card-title">Overdose</div>
-                <div class="card-text">açıklama</div>
-                <div>
-                    <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=Reebz&sid=ekRkNkZ3TDRWZlYzTFRzejBfLTFfIF8g">
-                        <button type="button" class="btn card-btn">ALIŞVERİS YAP</button>
-                    </a>
-                </div>
-            </div>
-            <!--1productEnd-->
-
+    
+            {% endif %}
+            
+           
         </div>
     </section>
     <br><br><br><br>

@@ -2,7 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-class product(models.Model):
+
+
+class Product(models.Model):
     name = models.CharField(max_length=50, verbose_name='Ürün adı')
     desc = models.TextField(verbose_name='Ürün açıklaması')
     category = models.CharField(max_length=50,default='sweatshirt',verbose_name='Ürün kategorisi')
