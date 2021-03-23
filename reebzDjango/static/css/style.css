@@ -14,6 +14,7 @@ pre{
   overflow: hidden;
 }
 
+
 a, u {
   text-decoration: none;
   color: inherit;
@@ -52,7 +53,7 @@ li {
   font-size: 22px;
   margin-right: 8px;
   margin-left: 8px;
-  margin-top: -25px;;
+  margin-top: -15px;
   margin-bottom: 0px;
 }
 
@@ -110,6 +111,7 @@ li {
 .always{
   padding: 8%;
   height: 450px;
+  width: 50%;
   float: left;
 }
 
@@ -128,6 +130,8 @@ li {
 .buyuk-resim-container{
   padding-left: 4%;
   padding-right: 4%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .container-lg-fluid {
@@ -139,6 +143,10 @@ li {
   transform: translate(1px,0px);
   margin-left:auto ;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
   background-size:100%;
   width: 95%;
   height: 800px;
@@ -147,7 +155,15 @@ li {
   justify-content: center;
 }
 
+.container-lg-fluid img{
+  vertical-align: center;
+  height: auto;
+}
 /*hakkımızda*/
+.aboutSection{
+  max-width: 95%;
+}
+
 .container-lg-fluid.about{
   background-position: center;
   background-image:url("../img/hakkında.png");
@@ -169,7 +185,8 @@ li {
 .about-text{
   color: #ffffff;
   transform: translate(0px,-750px);
-  padding-left: 250px;
+  padding-left: 20%;
+  padding-right: 20%;
   height: 150px;
 }
 
@@ -262,36 +279,6 @@ li {
 
 
 
-/*arama yap*/
-.arama{
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 2%;
-  transform: translate(0px,-22px);
-}
-
-
-
-.form-control,.form-control:focus{
-  transform: translate(0px,15px);
-  border-radius: 30px;
-  border: 0px;
-  background-color: rgba(255, 255, 255, 0.35);
-  text-align: center;
-  -webkit-text-fill-color: #ffffff;
-  outline: none;
-  box-shadow: none;
-  
-}
-
-
-.buton{
-  border: none;
-  background-color: transparent;
-  color: white;
-  transform: translate(5px,-15px);
-}
 
 /*Logo*/
 .navbar-brand > img{
@@ -331,6 +318,9 @@ footer{
 
 .footer .footer-content .footer-section{
   flex: 1;
+  padding-left: 4%;
+  padding-right: 4%;
+  max-width: 100%;
 }
 .footer-section.general{
   padding-top: 110px;
@@ -374,6 +364,7 @@ footer{
   padding-left:8em;
   padding-right: 8em;
   padding-top: 0em;
+  height: fit-content;
 }
 
 .product-container{
@@ -391,7 +382,7 @@ footer{
   width: 100%;
   padding-left: 4%;
   padding-right: 4%;
-  height: 650px;
+  height: auto;
 }
 
 .card .card-title{
@@ -403,7 +394,7 @@ footer{
 
 .card img{
   width: 100%;
-  height: 550px;
+  height: 500px;
 }
 
 .card-text{
@@ -442,8 +433,8 @@ footer{
 
 .detailCard .CardImgs{
   height: 100%;
-  flex: 0 0 40%;
-  
+  flex: 0 0 30%;
+  width: 100%;
 }
 
 .detailCard .CardTexts{
@@ -505,6 +496,7 @@ footer{
 
 .bodyTableImg{
   padding-right: 5%;
+  padding-left: 5%;
 }
 .bodyTableImg img{
   width: 60%;
@@ -553,6 +545,234 @@ footer{
   text-align: center;
 }
 
+/*geniş ekran*/
+
+@media only screen and (max-width: 2560px){
+  .product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    height: 100%;
+  }
+  
+  .card img{
+    height: 800px;
+  }
+
+  .detailCard .CardImgs{
+    height: 100%;
+    flex: 0 0 30%;
+    width: 100%;
+  }
+
+  .card img{
+    height: 650px;
+  }
+
+}
+
+@media only screen and (max-width: 2000px){
+  .product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    height: fit-content
+  }
+
+  .card img{
+    height: 500px;
+  }
+
+  .detailCard .CardImgs{
+    height: 100%;
+    flex: 0 0 35%;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 1600px){
+  .product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    height: fit-content;
+  }
+
+  .card img{
+    height: 450px;
+  }
+
+  .detailCard .CardImgs{
+    height: 100%;
+    flex: 0 0 50%;
+    width: 100%;
+  }
+
+  .bodyTableImg img{
+    width: 100%;
+    height: 100%;
+  }
+  
+
+}
+
+
+/*küçük laptop*/
+@media only screen and (max-width: 1200px){
+  .container-lg-fluid{
+    height: 500px;
+  }
+  
+  .card img{
+    height: 400px;
+  }
+
+  .product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    height: 100%;
+  }
+  .footer-section.footer-section.socials{
+    min-width: 300px;
+    padding-left: 50px;
+  }
+
+  .footer-section.empty{
+    max-width: 1px;
+    display: none;
+  }
+
+  .footer-section.general, .footer-section.papers{
+    min-width: 300px;
+  }
+
+  .detailCard{
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+  }
+
+  .detailCard .CardImgs{
+    height: 100%;
+    flex: 0 0 45%;
+    width: 100%;
+  }
+
+  .bigImg{
+    height: 480px;
+    width:auto;
+  }
+
+  .small-img-col{
+    flex-basis: 50%;
+    height: 120px;
+  }
+
+  .bodyTableContainer{
+    padding-top: 1%;
+  }
+
+  .bodyTableImg img{
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  .always{
+    float:none;
+    height: 450px;
+    width: 100%;
+  }
+
+  .always img{
+    max-width: 100%;
+  }
+}
+
+
+
+/*tablet ekran*/
+@media only screen and (max-width: 960px){
+  .container-lg-fluid{
+    height: 400px;
+  }
+  
+  .card img{
+    height: 280px;
+  }
+
+  .product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    height: 100%;
+  }
+
+  .footer-section.footer-section.socials{
+    min-width: 200px;
+    padding-left: 50px;
+  }
+
+  .footer-section.empty{
+    max-width: 1px;
+    display: none;
+  }
+
+  .footer-section.general, .footer-section.papers{
+    min-width: 200px;
+  }
+
+  .detailCard{
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: block;
+  }
+
+  .detailCard .CardImgs{
+    height: 100%;
+    flex: 1;
+    width: 100%;
+  }
+
+  .bigImg{
+    height: 650px;
+    width:auto;
+  }
+
+  .small-img-col{
+    flex-basis: 50%;
+    height: 160px;
+  }
+
+  .detailCard .CardTexts{
+    padding-top: 5%;
+  }
+
+  .bodyTableImg img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .always{
+    float:none;
+    height: 350px;
+  }
+
+  .always img{
+    max-width: 100%;
+  }
+}
+
+
 /*mobil ekran*/
 @media only screen and (max-width: 600px){
 
@@ -572,7 +792,7 @@ footer{
   .container-xl-fluid{
     margin-left: 2%;
     margin-right: 2%;
-    width: 120%;
+    width: 100%;
   }
 
   li {
@@ -608,9 +828,6 @@ footer{
     margin-left: 0px;
     text-transform: uppercase;
   }
-  .arama{
-    display: none;
-   }
   
   .container-lg-fluid{
     padding-top:0 !important;
@@ -667,11 +884,12 @@ footer{
 
   .footer{
     height: 300px;
-    min-width: 100%;
+    max-width: 100%;
   }
 
   .footer.footer-content{
     height: 250px;
+    width: 100%;
   }
 
   .footer-section.empty{
@@ -683,11 +901,10 @@ footer{
   }
   .footer-section.papers{
     padding-top: 20%;
-    padding-left:6% ;
   }
   .footer-section.socials{
     padding-top: 20%;
-    padding-left:0px ;
+    margin-left: -70px;
   }
 
   /*product list*/
@@ -722,6 +939,75 @@ footer{
   .card-image img{
     height: 100%;
   }
+
+  /*DetailPage*/
+
+  .detailCard{
+    width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: block;
+  }
+  
+  .detailCard .CardImgs{
+    width: 100%;
+    flex: 1;
+  }
+
+  .bigImg{
+    height: 400px;
+    width:auto;
+  }
+
+  .bigImg img{
+    width: 100%;
+    background-size: cover;
+  }
+
+  .small-img-row{
+    overflow: hidden;
+  }
+
+  .small-img-col{
+    flex-basis: 50%;
+    height: 100px;
+  }
+
+  .detailCard .CardTexts{
+    padding-top: 10%;
+  }
+
+  .detailTitle{
+    font-size: 40px;
+  }
+
+  .detailText{
+    font-size: 18px;
+  }
+
+
+  .price{
+    font-size: 20px;
+  }
+
+  
+  .bodyTableImg{
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+
+  .bodyTableImg img{
+    width: 100%;
+    height: 110%;
+  }
+
+  .showAllProducts{
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+  }
+  
 
   /*hakkında*/
   .about-text{
@@ -767,6 +1053,7 @@ footer{
   .contacts{
     padding-top: 1%;
     padding-left: 20%;
+    padding-right: 20%;
   }  
  
   .contractPage, .privacyPage, .sssPage{
@@ -776,4 +1063,5 @@ footer{
   }
 
 }
+
 

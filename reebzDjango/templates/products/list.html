@@ -13,7 +13,7 @@
                 <!--1productStart-->
                 <div class="card">
                     <div class="card-image">
-                        <a href="{% url 'detail' product.id %}"><img src="{% static product.get_image_path %}"></a>
+                        <a href="{% url 'detail' product.id %}"><img src="{{ product.get_image_path }}"></a>
                     </div>
                     <div class="card-title">
                         <a href="{% url 'detail' product.id %}">{{ product.name }}</a>

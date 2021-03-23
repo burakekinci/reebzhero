@@ -2,27 +2,23 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import Http404
 from . models import Product
-from . models import extraProduct
+from . models import SimilarProduct
 # Create your views here.
 
 
 def index(request):
     products = Product.objects.all()
-    extraProducts = extraProduct.objects.all()
     context = {
         'products': products,
-        'extraProducts': extraProducts
     }
     return render(request, 'products/list.html',context)
 
 
 def detail(request, product_id):
     product = get_object_or_404(Product, pk = product_id)
+    similarProducts = SimilarProduct.objects.all()
     context = {
-        'product':product
+        'product':product,
+        'similarProducts':similarProducts,
     }
     return render(request, 'products/detail.html',context)
-
-
-def search(request):
-    return render(request, 'products/search.html')
